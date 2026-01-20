@@ -1,0 +1,7 @@
+This code carry out the first quality control check on all reads to get an idea of what do next
+Once you have your QC files, you will need to run FASTP to remove any adapter sequences and other poor seq info
+*********************************************************************************************************************
+I used this code to run fastqc:
+nohup time fastqc -t 60 *.fastq -o D4993-C5-LG3-Sat_fastqc
+
+Path: /home/yggshare/ALL_DATA/00.read_data/11.Seq2Sat/01_rawreads/D4993-C5-LG3-Sat
