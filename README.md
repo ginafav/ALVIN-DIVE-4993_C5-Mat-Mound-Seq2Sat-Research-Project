@@ -10,5 +10,5 @@ The goal of this project is to investigate the diversity dynamics of Asgard arch
     - Presence of overrepresented sequences in some samples
 - **FASTP:**
     - This removed poor quality reads and adapter sequences
-- **FASTQC:**
+- **FastQC:**
     - This was performed on the FASTP output, to confirm the read quality
