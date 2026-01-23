@@ -5,3 +5,5 @@ I used this code to run fastqc:
 nohup time fastqc -t 60 *.fastq -o D4993-C5-LG3-Sat_fastqc
 
 Path: /home/yggshare/ALL_DATA/00.read_data/11.Seq2Sat/01_rawreads/D4993-C5-LG3-Sat
+
+Next, FAstQC was performed on the output obtained from FASTP run. The following code was used to generate the final QC:
