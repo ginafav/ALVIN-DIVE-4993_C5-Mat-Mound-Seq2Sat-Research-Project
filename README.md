@@ -13,5 +13,5 @@ The goal of this project is to investigate the diversity dynamics of Asgard arch
 - **FastQC:**
     - This was performed on the FASTP output, to confirm the read quality
   
--**INTERLEAVE"**
+- **INTERLEAVE:**
     - Next, interleave R1 and R2 to make a single fastq file. Do for everyother read pairs
