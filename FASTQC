@@ -7,3 +7,10 @@ nohup time fastqc -t 60 *.fastq -o D4993-C5-LG3-Sat_fastqc
 Path: /home/yggshare/ALL_DATA/00.read_data/11.Seq2Sat/01_rawreads/D4993-C5-LG3-Sat
 
 Next, FAstQC was performed on the output obtained from FASTP run. The following code was used to generate the final QC:
+nohup time fastqc -t 75 /home/yggshare/ALL_DATA/00.read_data/11.Seq2Sat/01_rawreads/D4993-C5-LG3-Sat/D4993-C5-LG3-Sat_fastqc_fastp/*.fastq -o D4993-C5-LG3-Sat_fastqc_fastp-FASTQC &
+
+FastQC on the raw reads from KEA and VDA paper:
+nohup time fastqc -t 60 /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_State_NovaSeq/FastqFiles_NVS070B_Baker_R1/4993_5_H3_S3_R1_001.fastq.gz /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_State_NovaSeq/FastqFiles_NVS070B_Baker_R2/4993_5_H3_S3_R2_001.fastq.gz /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_State_NovaSeq/FastqFiles_NVS070B_Baker_R1/4993_5_LG_S4_R1_001.fastq.gz  /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_State_NovaSeq/FastqFiles_NVS070B_Baker_R2/4993_5_LG_S4_R2_001.fastq.gz -o 4993_5_H3_S3-4993_5_LG_S4-fastqc &
+
+Lastly, FastQC was performed on the fastp'd KEA and VDA metagenomes
+nohup time fastqc -t 40 /home/yggshare/ALL_DATA/00.read_data/11.Seq2Sat/01_rawreads/D4993-C5-LG3-Sat/4993_5_H3_S3-4993_5_LG_S4_fastqc-fastp/*.gz -o /home/yggshare/ALL_DATA/00.read_data/11.Seq2Sat/01_rawreads/D4993-C5-LG3-Sat/4993_5_H3_S3-4993_5_LG_S4-fastp-FASTQC &
