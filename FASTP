@@ -30,11 +30,15 @@ nohup parallel -j3 < D4993-C5-LG3-Sat_fastp_script.sh &
 
 
 ## FastP code for KEA and VDA samples:
-fastp --thread 15 -i /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_State_NovaSeq/FastqFiles_NVS070B_Baker_R1/4993_5_H3_S3_R1_001.fastq.gz -I /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_State_NovaSeq/FastqFiles_NVS070B_Baker_R2/4993_5_H3_S3_R2_001.fastq.gz -g -x --dedup --dup_calc_accuracy 3  \
--o 4993_5_H3_S3_R1_001-FASTP.fastq.gz -O 4993_5_H3_S3_R2_001-FASTP.fastq.gz --adapter_sequence=AGATCGGAAGAGCACACGTCTGAACTCCAGTCA --adapter_sequence_r2=AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --qualified_quality_phred 33 --cut_right_window_size 5 --cut_right_mean_quality 15 --length_required 50
+fastp --thread 25 -i /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_State_NovaSeq/FastqFiles_NVS070B_Baker_R1/4993_5_H3_S3_R1_001.fastq.gz  \
+-I /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_State_NovaSeq/FastqFiles_NVS070B_Baker_R2/4993_5_H3_S3_R2_001.fastq.gz -g -x --dedup --dup_calc_accuracy 3  \
+-o 4993_5_H3_S3_R1_001-FASTP.fastq.gz -O 4993_5_H3_S3_R2_001-FASTP.fastq.gz --adapter_sequence=AGATCGGAAGAGCACACGTCTGAACTCCAGTCA --adapter_sequence_r2=AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT \
+--qualified_quality_phred 33 --cut_right_window_size 5 --cut_right_mean_quality 15 --length_required 50
 
-fastp --thread 15 -i /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_State_NovaSeq/FastqFiles_NVS070B_Baker_R1/4993_5_LG_S4_R1_001.fastq.gz -I /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_State_NovaSeq/FastqFiles_NVS070B_Baker_R2/4993_5_LG_S4_R2_001.fastq.gz -g -x --dedup --dup_calc_accuracy 3  \
--o 4993_5_LG_S4_R1_001-FASTP.fastq.gz -O 4993_5_LG_S4_R2_001-FASTP.fastq.gz --adapter_sequence=AGATCGGAAGAGCACACGTCTGAACTCCAGTCA --adapter_sequence_r2=AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --qualified_quality_phred 33 --cut_right_window_size 5 --cut_right_mean_quality 15 --length_required 50
+fastp --thread 25 -i /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_State_NovaSeq/FastqFiles_NVS070B_Baker_R1/4993_5_LG_S4_R1_001.fastq.gz \
+-I /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_State_NovaSeq/FastqFiles_NVS070B_Baker_R2/4993_5_LG_S4_R2_001.fastq.gz -g -x --dedup --dup_calc_accuracy 3  \
+-o 4993_5_LG_S4_R1_001-FASTP.fastq.gz -O 4993_5_LG_S4_R2_001-FASTP.fastq.gz --adapter_sequence=AGATCGGAAGAGCACACGTCTGAACTCCAGTCA --adapter_sequence_r2=AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT  \
+--qualified_quality_phred 33 --cut_right_window_size 5 --cut_right_mean_quality 15 --length_required 50
 
 Next, run on GNU parallel:
 chmod +x 4993_5_H3_S3-4993_5_LG_S4_fastp_script.sh 
