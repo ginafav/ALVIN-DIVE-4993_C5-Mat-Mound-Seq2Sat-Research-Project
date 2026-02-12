@@ -25,4 +25,4 @@
 
 Next, run on GNU parallel:
 chmod +x D4993-C5-clumpify.sh
-nohup parallel -j1 < D4993-C5-clumpify.sh &
+nohup parallel -j1 < D4993-C5-clumpify.sh  > clumpify.log 2>&1 &
