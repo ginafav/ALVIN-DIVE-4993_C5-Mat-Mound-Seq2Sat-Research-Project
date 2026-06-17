@@ -28,6 +28,10 @@ seqkit stats --all /home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.MEGA
 nohup merge_wrapper.py -hco 5.0 -c 1.5 -l 16573 -ml 5000 -pre MERGED_MEGAHIT_ASSEMBLIES Concat_MEGAHIT_SUBSET-R1-R3-ASSEMBLY.fa D4993_5_LG-H3-renamedcontigs.min5000.fa &
 ```
 
-Output files for the test run is found here:
+##Output files for the test run is found here:
 
 /home/yggshare/current_projects/Seq2Sat/05.Assemblies/10.QUICKMERGE_TEST
+
+
+##Final merged file used for binning is located here:
+/home/yggshare/current_projects/Seq2Sat/05.Assemblies/10.QUICKMERGE_TEST/merged_MERGED_MEGAHIT_ASSEMBLIES.fasta
