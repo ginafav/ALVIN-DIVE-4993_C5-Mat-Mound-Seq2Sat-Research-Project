@@ -15,3 +15,31 @@ echo "done!"
 
 ##Next run, this the following on the assembly file
 ##nohup ./rename_contigs.sh /home/yggshare/current_projects/Seq2Sat/05.Assemblies/D4993-C5-LG3-Sat_ASSEMBLY final.contigs.fa D4993-C5-LG3-Seq2Sat &
+
+
+
+##RENAMING SUBSET ASSEMBLIES
+
+- The first subset assembly to rename is “03_MEGAHIT_D4993-C5-LG3-Sat-R1_ASSEMBLY”
+
+```jsx
+nohup ./rename_contigs.sh /home/yggshare/current_projects/Seq2Sat/05.Assemblies/03_MEGAHIT_D4993-C5-LG3-Sat-R1_ASSEMBLY final.contigs.fa D4993-C5-LG3-R1 &
+```
+
+- The second subset assembly to rename is “03_MEGAHIT_D4993-C5-LG3-Sat-R2_ASSEMBLY”
+
+```jsx
+nohup ./rename_contigs.sh /home/yggshare/current_projects/Seq2Sat/05.Assemblies/04.MEGAHIT_D4993-C5-LG3-Sat-R2_ASSEMBLY final.contigs.fa D4993-C5-LG3-R2 &
+```
+
+- The third subset assembly to rename is “03_MEGAHIT_D4993-C5-LG3-Sat-R3_ASSEMBLY”
+```jsx
+nohup ./rename_contigs.sh /home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.MEGAHIT_D4993-C5-LG3-Sat-R3_ASSEMBLY final.contigs.fa D4993-C5-LG3-R3 &
+```
+
+- The fourth subset assembly to rename is “03_MEGAHIT_D4993-C5-LG3-Sat-R4_ASSEMBLY”
+
+```jsx
+nohup ./rename_contigs.sh /home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.MEGAHIT_D4993_5_LG-H3_ASSEMBLY final.contigs.fa D4993_5_LG-H3 &
+```
+
