@@ -1,0 +1,26 @@
+#Megahit on Full Reads:
+This is the code used for generating the Seq2Sat assembly. This assembly is this "Big File", That is, the full assembly.
+nohup megahit --presets meta-large --12 D4993_ALL_READS_DEDUPED_INTERLEAVED_CONCATD.fastq -t 115 -m 0.95 --mem-flag 0 -o /home/yggshare/current_projects/Seq2Sat/05.Assemblies/D4993-C5-LG3-Sat_ASSEMBLY & 
+
+#Megahit on Subset Reads:
+These are the splitted read files. Megahit was run on these 4 subsets
+#1. Running on the first replicate of Seq2Sat reads
+
+```jsx
+nohup megahit --presets meta-large --12 /home/yggshare/current_projects/Seq2Sat/22.Concatenated/03.Concat_Subsets/D4993-C5-LG3-Sat-R1-FASTP-DEDUPED-INTERLEAVED.fastq -t 115 -m 0.95 --mem-flag 0 -o /home/yggshare/current_projects/Seq2Sat/05.Assemblies/03_MEGAHIT_D4993-C5-LG3-Sat-R1_ASSEMBLY &
+```
+
+2. Run on the second replicate of Seq2Sat reads
+
+```jsx
+nohup megahit --presets meta-large --12 /home/yggshare/current_projects/Seq2Sat/22.Concatenated/03.Concat_Subsets/D4993-C5-LG3-Sat-R2-FASTP-DEDUPED-INTERLEAVED_concat.fastq -t 115 -m 0.95 --mem-flag 0 -o /home/yggshare/current_projects/Seq2Sat/05.Assemblies/04.MEGAHIT_D4993-C5-LG3-Sat-R2_ASSEMBLY &
+```
+
+3. Running on the third replicate of Seq2Sat reads
+
+```jsx
+nohup megahit --presets meta-large --12 /home/yggshare/current_projects/Seq2Sat/22.Concatenated/03.Concat_Subsets/D4993-C5-LG3-Sat-R3-FASTP-DEDUPED-INTERLEAVED_concatd.fastq -t 115 -m 0.95 --mem-flag 0 -o /home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.MEGAHIT_D4993-C5-LG3-Sat-R3_ASSEMBLY &
+```
+
+4. Running on the last KEA LG and H3 samples (concatenated)
+nohup megahit --presets meta-large --12 /home/yggshare/current_projects/Seq2Sat/22.Concatenated/03.Concat_Subsets/D4993_5_LG_H3-FASTP-DEDUPED-INTERLEAVED_concat.fastq -t 115 -m 0.95 --mem-flag 0 -o /home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.MEGAHIT_D4993_5_LG-H3_ASSEMBLY &
