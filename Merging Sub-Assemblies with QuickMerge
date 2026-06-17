@@ -1,0 +1,33 @@
+#we chose the “anchor/reference/self” assembly. This will be the backbone assembly we are build on. 
+#This provides the contigs that can be anchors if they are ≥ -l and have strong overlaps (-hco). This must be your trusted backbone (anchors). We chose LG-H3.
+
+#Anchor Contig:
+/home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.MEGAHIT_D4993_5_LG-H3_ASSEMBLY/D4993_5_LG-H3-contigsdir/D4993_5_LG-H3-renamedcontigs.fa
+
+#Next, we decided to use contigs a minimum of 5000bp (- Using contigs that are ≥5000.)
+
+seqkit seq -m 5000 /home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.MEGAHIT_D4993_5_LG-H3_ASSEMBLY/D4993_5_LG-H3-contigsdir/D4993_5_LG-H3-renamedcontigs.fa -o D4993_5_LG-H3-renamedcontigs.min5000.fa
+
+#We used the N50 of your anchor assembly. This was used to determine the minimum length cut-off of the backbone assembly (-l) 
+
+##The minimum contig length in this file (D4993_5_LG-H3-renamedcontigs.fa) is 200bp
+seqkit stats --all /home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.MEGAHIT_D4993_5_LG-H3_ASSEMBLY/D4993_5_LG-H3-contigsdir/D4993_5_LG-H3-renamedcontigs.fa &
+
+#N50 = 1000
+
+
+##The minimum contig length here (D4993_5_LG-H3-renamedcontigs.min5000.fa) is 5000bp. This is the assembly we considered for downstream analysis.
+seqkit stats --all /home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.MEGAHIT_D4993_5_LG-H3_ASSEMBLY/D4993_5_LG-H3_contigs_5000_above/D4993_5_LG-H3-renamedcontigs.min5000.fa &
+
+#N50 = 16,573
+
+##QUICKMERGE
+- Run Quickmerge on the files using the default parameters:
+
+```jsx
+nohup merge_wrapper.py -hco 5.0 -c 1.5 -l 16573 -ml 5000 -pre MERGED_MEGAHIT_ASSEMBLIES Concat_MEGAHIT_SUBSET-R1-R3-ASSEMBLY.fa D4993_5_LG-H3-renamedcontigs.min5000.fa &
+```
+
+Output files for the test run is found here:
+
+/home/yggshare/current_projects/Seq2Sat/05.Assemblies/10.QUICKMERGE_TEST
