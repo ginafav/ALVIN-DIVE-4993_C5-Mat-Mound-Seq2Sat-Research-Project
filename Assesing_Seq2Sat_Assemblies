@@ -1,0 +1,28 @@
+##Seq2Sat Full Assembly (D Big Assembly)
+##This code check the length distribution and GC content of the full assembly:
+
+nohup ./script /home/yggshare/current_projects/Seq2Sat/05.Assemblies/D4993-C5-LG3-Sat_ASSEMBLY/D4993-C5-LG3-Seq2Sat-contigsdir/D4993-C5-LG3-Seq2Sat-renamedcontigs.fa >> /home/yggshare/current_projects/Seq2Sat/06.Stats/D4993-C5-LG3-Seq2Sat-Stats.tsv &
+
+##Subset Assembly (4 subset assembly; R1-R3 + LG-H3)
+##Getting the length and GC content of R1-R3 Seq2Sat Assemblies.
+
+- Getting the length and GC content of R1-R3 Seq2Sat Assemblies.
+
+```jsx
+nohup ./length+GC.pl /home/yggshare/current_projects/Seq2Sat/05.Assemblies/03_MEGAHIT_D4993-C5-LG3-Sat-R1_ASSEMBLY/D4993-C5-LG3-R1-contigsdir/D4993-C5-LG3-R1-renamedcontigs.fa >> /home/yggshare/current_projects/Seq2Sat/06.Stats/D4993-C5-LG3-R1-Stats.tsv &
+```
+
+```jsx
+nohup ./length+GC.pl /home/yggshare/current_projects/Seq2Sat/05.Assemblies/04.MEGAHIT_D4993-C5-LG3-Sat-R2_ASSEMBLY/D4993-C5-LG3-R2-contigsdir/D4993-C5-LG3-R2-renamedcontigs.fa >> /home/yggshare/current_projects/Seq2Sat/06.Stats/D4993-C5-LG3-R2-Stats.tsv &
+```
+
+```jsx
+nohup ./length+GC.pl /home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.MEGAHIT_D4993-C5-LG3-Sat-R3_ASSEMBLY/D4993-C5-LG3-R3-contigsdir/D4993-C5-LG3-R3-renamedcontigs.fa >> /home/yggshare/current_projects/Seq2Sat/06.Stats/D4993-C5-LG3-R3-Stats.tsv &
+```
+
+##Getting the length and GC content for KEA&VDA assembly (LG-H3).
+
+```jsx
+nohup ./length+GC.pl /home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.MEGAHIT_D4993_5_LG-H3_ASSEMBLY/D4993_5_LG-H3-contigsdir/D4993_5_LG-H3-renamedcontigs.fa >> /home/yggshare/current_projects/Seq2Sat/06.Stats/D4993_5_LG-H3-Stats.tsv &
+```
+
