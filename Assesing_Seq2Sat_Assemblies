@@ -26,3 +26,17 @@ nohup ./length+GC.pl /home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.ME
 nohup ./length+GC.pl /home/yggshare/current_projects/Seq2Sat/05.Assemblies/05.MEGAHIT_D4993_5_LG-H3_ASSEMBLY/D4993_5_LG-H3-contigsdir/D4993_5_LG-H3-renamedcontigs.fa >> /home/yggshare/current_projects/Seq2Sat/06.Stats/D4993_5_LG-H3-Stats.tsv &
 ```
 
+## This code Calculates the Length distribution of the quickmerge output:
+
+
+```jsx
+nohup ./length+GC.pl /home/yggshare/current_projects/Seq2Sat/05.Assemblies/10.QUICKMERGE_TEST/merged_MERGED_MEGAHIT_ASSEMBLIES.fasta >> /home/yggshare/current_projects/Seq2Sat/06.Stats/merged_MERGED_MEGAHIT_ASSEMBLIES.tsv &
+```
+
+
+#File is saved here:
+/home/yggshare/current_projects/Seq2Sat/05.Assemblies/10.QUICKMERGE_TEST
+
+#
+
+
