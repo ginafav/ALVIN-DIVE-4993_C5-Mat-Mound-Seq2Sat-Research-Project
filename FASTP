@@ -39,3 +39,15 @@ fastp --thread 25 -i /home/yggshare/current_projects/Guaymas2020/00.raw_data/NC_
 Next, run on GNU parallel:
 chmod +x 4993_5_H3_S3-4993_5_LG_S4_fastp_script.sh 
 nohup parallel -j2 <  4993_5_H3_S3-4993_5_LG_S4_fastp_script.sh &
+
+
+
+##FastP code for H1-H4 rest of core 4993 sample
+fastp --thread 20 -i 4993_5_H1_S1_R1_001.fastq.gz -I 4993_5_H1_S1_R2_001.fastq.gz -o 4993_5_H1_S1_R1_001-FASTP.fastq.gz -O 4993_5_H1_S1_R2_001-FASTP.fastq.gz -g -x --detect_adapter_for_pe --qualified_quality_phred 33 --overrepresentation_analysis 5 --cut_right --cut_right_window_size 5 --cut_right_mean_quality 15 --length_required 50
+fastp --thread 20 -i 4993_5_H2_S2_R1_001.fastq.gz -I 4993_5_H2_S2_R2_001.fastq.gz -o 4993_5_H2_S2_R1_001-FASTP.fastq.gz -O 4993_5_H2_S2_R2_001-FASTP.fastq.gz -g -x --dedup --dup_calc_accuracy 3 --detect_adapter_for_pe --qualified_quality_phred 33 --cut_right --cut_right_window_size 5 --cut_right_mean_quality 15 --length_required 50
+fastp --thread 20 -i 4993_5_H4_S2_L001_R1_001.fastq.gz -I 4993_5_H4_S2_L001_R2_001.fastq.gz -o 4993_5_H4_S2_L001_R1_001-FASTP.fastq.gz -O 4993_5_H4_S2_L001_R2_001-FASTP.fastq.gz -g -x --dedup --dup_calc_accuracy 3 --detect_adapter_for_pe --qualified_quality_phred 33 --overrepresentation_analysis 5 --cut_right --cut_right_window_size 5 --cut_right_mean_quality 15 --length_required 50
+fastp --thread 20 -i 4993_5_H4_S2_L002_R1_001.fastq.gz -I 4993_5_H4_S2_L002_R2_001.fastq.gz -o 4993_5_H4_S2_L002_R1_001-FASTP.fastq.gz -O 4993_5_H4_S2_L002_R2_001-FASTP.fastq.gz -g -x --dedup --dup_calc_accuracy 3 --detect_adapter_for_pe --qualified_quality_phred 33 --overrepresentation_analysis 5 --cut_right --cut_right_window_size 5 --cut_right_mean_quality 15 --length_required 50
+
+Next, run on GNU parallel:
+chmod +x 4993_5_H1-H4_fastp_script.sh 
+nohup parallel -j2 <  4993_5_H1-H4_fastp_script.sh &
